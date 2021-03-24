@@ -11,14 +11,19 @@
 
 <body onload="initGame()">
     <h1 class="title">💥 Minesweeper 💥</h1>
-    <table class="mineBoard"></table>
+    <div class="levelButtons">
+        <button class="levelButton" onclick="chooseLevel(0)">😀</button>
+        <button class="levelButton" onclick="chooseLevel(1)">😅</button>
+        <button class="levelButton" onclick="chooseLevel(2)">🤯</button>
+        <button class="levelButton" onclick="chooseLevel(3)">💀</button>
+    </div>
     <h3 class="flagMarks">⛳ : 0</h3>
     <h3 class="openedCellsShow">⛏️ : 0</h3>
+    <table class="mineBoard"></table>
     <div onclick="playAgain()" class="timerModal hide">
         <h3 class="timerTitle">The game is started!!!</h3>
         <h3 class="timer"></h3>
     </div>
-
     <script src="./js/main.js"></script>
 </body>
 

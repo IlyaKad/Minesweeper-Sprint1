@@ -73,3 +73,9 @@ body {
     cursor: pointer;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.24), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.levelButton {
+    width: 65px;
+    height: 45px;
+    margin-bottom: 10px;
+}

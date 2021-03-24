@@ -67,7 +67,10 @@ function renderBoard(board) {
 }
 
 function cellClicked(elCell, i, j) {
-    if (!gGame.secsPassed) timer();
+    if (!gGame.secsPassed) {
+        timer();
+        document.querySelector('.levelButtons').classList.add('noPointerEvents');
+    }
 
     if (gBoard[i][j].isShown || gBoard[i][j].isMarked) return;
     if (gBoard[i][j].isMine === true) {
@@ -145,12 +148,13 @@ function resetGame() {
         secsPassed: 0
     }
     document.querySelector('.mineBoard').classList.remove('noPointerEvents');
-    document.querySelector('.timerModal').style.animation = 'timerModal 1.5s linear infinite';
     document.querySelector('.timerTitle').innerText = 'The game is started!!!';
+    document.querySelector('.timerModal').style.animation = 'timerModal 1.5s linear infinite';
     document.querySelector('.timerModal').classList.add('noPointerEvents');
     document.querySelector('.timerModal').classList.add('hide');
     document.querySelector('.openedCellsShow').innerText = `⛏️: ${gGame.shownCount}`;
     document.querySelector('.timer').innerText = `⏱️ 0 sec`;
+    document.querySelector('.levelButtons').classList.remove('noPointerEvents');
 }
 
 function openBombs(board, idxI, idxJ) {
@@ -168,6 +172,14 @@ function openBombs(board, idxI, idxJ) {
 
         }
     }
+}
+
+function chooseLevel(level) {
+    if (level === 0) gLevel.SIZE = 4;
+    if (level === 1) gLevel.SIZE = 6;
+    if (level === 2) gLevel.SIZE = 8;
+    if (level === 3) gLevel.SIZE = 10;
+    initGame();
 }
 
 function timer() {
