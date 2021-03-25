@@ -165,10 +165,10 @@ function gameOver(elCell, i, j) {
 
 function livesCheck(elCell, i, j) {
     gLevel.LIVES--;
-    if (gLevel.LIVES === 2) document.querySelector('.livesShow').innerText = '❤️❤️❤';
-    if (gLevel.LIVES === 1) document.querySelector('.livesShow').innerText = '❤️❤❤';
+    if (gLevel.LIVES === 2) document.querySelector('.livesShow').innerText = '❤️❤️';
+    if (gLevel.LIVES === 1) document.querySelector('.livesShow').innerText = '❤️';
     if (gLevel.LIVES === 0) {
-        document.querySelector('.livesShow').innerText = '❤❤❤';
+        document.querySelector('.livesShow').innerText = '';
         gameOver(elCell, i, j);
     }
 }
