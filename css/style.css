@@ -1,7 +1,7 @@
 body {
     background: linear-gradient(to top, rgb(206, 250, 206), white) no-repeat center / cover fixed;
     text-align: center;
-    font-family: cursive;
+    font-family: 'Raleway', sans-serif;
 }
 
 .mineBoard {
@@ -21,6 +21,10 @@ body {
     opacity: 0.85;
     transition: 0.3s;
     cursor: pointer;
+}
+
+.openedCell {
+    background: linear-gradient(45deg, rgb(182, 199, 198), rgb(187, 142, 202));
 }
 
 .cell:hover {
@@ -52,6 +56,10 @@ body {
     }
 }
 
+.animationOff {
+    animation: none;
+}
+
 .timerTitle {
     padding: 10px 5px 0px 5px;
 }
@@ -64,9 +72,10 @@ body {
     pointer-events: none;
 }
 
-.flagMarks, .openedCellsShow {
+.flagMarks, .openedCellsShow, .livesShow {
     display: inline-block;
     margin: 10px;
+    font-size: x-large;
 }
 
 .timerModal:hover {
@@ -78,6 +87,12 @@ body {
     width: 65px;
     height: 45px;
     margin-bottom: 10px;
+    border-radius: 10%;
+    padding: 3px;
+}
+
+.buttonImg {
+    height: 100%;
 }
 
 .victoryImg {

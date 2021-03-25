@@ -14,14 +14,15 @@
     <h1 class="title">💥 Minesweeper 💥</h1>
 
     <div class="levelButtons">
-        <button class="levelButton" onclick="chooseLevel(0)">😀</button>
-        <button class="levelButton" onclick="chooseLevel(1)">😅</button>
-        <button class="levelButton" onclick="chooseLevel(2)">🤯</button>
-        <button class="levelButton" onclick="chooseLevel(3)">💀</button>
+        <button class="levelButton" onclick="chooseLevel(0)"><img class="buttonImg" src="./pics/easy.png"></button>
+        <button class="levelButton" onclick="chooseLevel(1)"><img class="buttonImg" src="./pics/medium.png"></button>
+        <button class="levelButton" onclick="chooseLevel(2)"><img class="buttonImg" src="./pics/explodedHead.png"></button>
+        <button class="levelButton" onclick="chooseLevel(3)"><img class="buttonImg" src="./pics/skull.png"></button>
     </div>
 
     <h3 class="flagMarks">⛳ : 0</h3>
     <h3 class="openedCellsShow">⛏️ : 0</h3>
+    <h3 class="livesShow"></h3>
 
     <table class="mineBoard"></table>
 
@@ -30,6 +31,7 @@
         <h3 class="timer"></h3>
     </div>
 
+    <script src="./js/util.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
