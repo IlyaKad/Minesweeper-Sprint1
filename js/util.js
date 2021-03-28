@@ -1,5 +1,5 @@
 function randomMinesArray() {
-    var sizeNums = gLevel.SIZE * gLevel.SIZE;
+    var sizeNums = gLevel.SIZE * gLevel.SIZE - 1;
     var nums = [];
     for (var i = 0; i < sizeNums; i++) {
         nums[i] = i;
